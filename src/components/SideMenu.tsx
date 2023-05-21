@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./Button";
+import { ParagraphBig } from "./Typography";
 
 type Props = {
   onClose: () => void;
@@ -30,13 +31,24 @@ export const SideMenu: React.FC<Props> = ({ onClose }) => {
             className="absolute top-[56px] right-[25px] cursor-pointer"
           />
           <div className="flex flex-col gap-[30px] ml-[50px] mt-[150px]">
-            <Link to="/">
-              <p className="text-[18px] font-semibold">home</p>
+            <Link to="/" onClick={onClose}>
+              <ParagraphBig className="text-[18px] font-semibold">
+                home
+              </ParagraphBig>
             </Link>
-            <Link to="/about">
-              <p className="text-[18px] font-semibold">about</p>
+            <Link to="/about" onClick={onClose}>
+              <ParagraphBig className="text-[18px] font-semibold">
+                about
+              </ParagraphBig>
             </Link>
-            <Button onClick={() => navigate("/contact")}>contact us</Button>
+            <Button
+              onClick={() => {
+                navigate("/contact");
+                onClose();
+              }}
+            >
+              contact us
+            </Button>
           </div>
           <img
             src="./assets/bg-pattern-about-1-mobile-nav-1.svg"

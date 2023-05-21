@@ -1,10 +1,12 @@
 import React from "react";
+import classnames from "classnames";
 
 type Props = {
   children: React.ReactNode;
   onClick: () => void;
   secondary?: boolean;
   dark?: boolean;
+  className?: string;
 };
 
 export const Button: React.FC<Props> = ({
@@ -12,22 +14,22 @@ export const Button: React.FC<Props> = ({
   secondary = false,
   dark = false,
   children,
+  className,
 }) => {
-  const borderColor = dark ? "sacramento-green" : "white";
-  const textColor = secondary || dark ? "sacramento-green" : "white";
-  const bgColor = secondary ? "white" : "inherit";
-
-  const hoverTextColor = dark ? "white" : "sacramento-green";
-  const hoverColor = secondary
-    ? "light-blue"
-    : dark
-    ? "sacramento-green"
-    : "white";
-
   return (
     <button
       onClick={onClick}
-      className={`h-[48px] border-2 rounded-3xl border-${borderColor} text-${textColor} w-[153px] font-semibold text-[18px] bg-${bgColor} hover:text-${hoverTextColor} hover:bg-${hoverColor} hover:border-${hoverColor}`}
+      className={classnames(
+        `${className} h-[48px] border-2 rounded-3xl font-semibold text-[18px] w-[153px]`,
+        {
+          "border-sacramento-green text-sacramento-green bg-inherit hover:text-white hover:bg-sacramento-green":
+            dark,
+          "border-white text-sacramento-green bg-white hover:bg-light-blue hover:border-light-blue ":
+            secondary,
+          "border-white text-white bg-inherit hover:text-sacramento-green hover:bg-white":
+            !dark && !secondary,
+        }
+      )}
     >
       {children}
     </button>

@@ -2,7 +2,7 @@ import React from "react";
 
 type BaseProps = {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 };
 
 export const HeadingMainLarge: React.FC<BaseProps> = ({
