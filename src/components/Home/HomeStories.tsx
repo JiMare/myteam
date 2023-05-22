@@ -1,14 +1,51 @@
 import React from "react";
+import { HeadingLarge } from "../Typography";
+import { Story } from "./Story";
 
-//TODO špatne styly u nadpisu zkopirovane - dodelat
+const storiesData = [
+  {
+    text: "“The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”",
+    name: "Kady Baker",
+    role: "Product Manager at Bookmark",
+    avatar: "avatar-kady",
+  },
+  {
+    text: "“We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”",
+    name: "Aiysha Reese",
+    role: "Founder of Manage",
+    avatar: "avatar-aiysha",
+  },
+  {
+    text: "“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”",
+    name: "Arthur Clarke",
+    role: "Co-founder of MyPhysio",
+    avatar: "avatar-arthur",
+  },
+];
 
 export const HomeStories: React.FC = () => {
   return (
-    <section className="bg-green">
-      <h2 className="text-center text-[32px] font-bold pt-[32px] max-w-[240px] leading-8 mb-[56px] md:max-w-[445px]">
+    <section className="bg-green pt-[140px] relative">
+      <img
+        src="./assets/bg-pattern-home-4-about-3.svg"
+        alt="pattern"
+        className="absolute top-0 left-0"
+      />
+      <HeadingLarge className="text-center max-w-[327px] mx-auto">
         Delivering real results for top companies. Some of our{" "}
         <span className="text-light-blue">success stories.</span>
-      </h2>
+      </HeadingLarge>
+      <div>
+        {storiesData.map((story) => (
+          <Story
+            key={story.avatar}
+            name={story.name}
+            text={story.text}
+            role={story.role}
+            avatar={story.avatar}
+          />
+        ))}
+      </div>
     </section>
   );
 };

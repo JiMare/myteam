@@ -35,6 +35,7 @@ export const HomeFeatures: React.FC = () => {
         <div className="xl:pt-[54px]">
           {featuresData.map((feature) => (
             <Feature
+              key={feature.title}
               img={feature.img}
               text={feature.text}
               title={feature.title}
