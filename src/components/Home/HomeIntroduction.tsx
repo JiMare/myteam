@@ -1,5 +1,5 @@
 import React from "react";
-import { HeadingMainLarge, ParagraphBig } from "../Typography";
+import { HeadingMainLarge, ParagraphBig } from "../ui/Typography";
 
 export const HomeIntroduction: React.FC = () => {
   return (

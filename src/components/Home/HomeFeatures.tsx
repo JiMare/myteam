@@ -1,6 +1,6 @@
 import React from "react";
 import { Feature } from "./Feature";
-import { HeadingLarge } from "../Typography";
+import { HeadingLarge } from "../ui/Typography";
 
 const featuresData = [
   {

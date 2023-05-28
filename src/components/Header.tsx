@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { SideMenu } from "./SideMenu";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "./Button";
-import { ParagraphBig } from "./Typography";
+import { Button } from "./ui/Button";
+import { ParagraphBig } from "./ui/Typography";
 
 export const Header: React.FC = () => {
   const navigate = useNavigate();

@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "./Button";
-import { ParagraphBig } from "./Typography";
+import { Button } from "./ui/Button";
+import { ParagraphBig } from "./ui/Typography";
 
 type Props = {
   onClose: () => void;

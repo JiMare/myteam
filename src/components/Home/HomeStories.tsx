@@ -1,5 +1,5 @@
 import React from "react";
-import { HeadingLarge } from "../Typography";
+import { HeadingLarge } from "../ui/Typography";
 import { Story } from "./Story";
 
 const storiesData = [
@@ -46,7 +46,11 @@ export const HomeStories: React.FC = () => {
           />
         ))}
       </div>
-      <img src="./assets/bg-pattern-home-5.svg" alt="pattern" className="absolute bottom-0 right-0"/>
+      <img
+        src="./assets/bg-pattern-home-5.svg"
+        alt="pattern"
+        className="absolute bottom-0 right-0"
+      />
     </section>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { HeadingSmall, ParagraphSmall } from "../Typography";
+import { HeadingSmall, ParagraphSmall } from "../ui/Typography";
 
 type Props = {
   text: string;
