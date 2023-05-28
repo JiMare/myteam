@@ -20,11 +20,11 @@ export const Story: React.FC<Props> = ({ text, name, role, avatar }) => {
         {text}
       </ParagraphSmall>
       <HeadingSmall className="text-light-blue mt-[16px]">{name}</HeadingSmall>
-      <h4>{role}</h4>
+      <h4 className="text-[13px] italic mt-[2px] mb-[16px]">{role}</h4>
       <img
         src={`./assets/${avatar}.jpg`}
         alt="avatar"
-        className="w-[62px] h-[62px] rounded-full"
+        className="w-[62px] h-[62px] rounded-full border-2 border-[#C4FFFE]"
       />
     </div>
   );

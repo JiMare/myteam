@@ -25,7 +25,7 @@ const storiesData = [
 
 export const HomeStories: React.FC = () => {
   return (
-    <section className="bg-green pt-[140px] relative">
+    <section className="bg-green pt-[140px] px-[24px] relative">
       <img
         src="./assets/bg-pattern-home-4-about-3.svg"
         alt="pattern"
@@ -35,7 +35,7 @@ export const HomeStories: React.FC = () => {
         Delivering real results for top companies. Some of our{" "}
         <span className="text-light-blue">success stories.</span>
       </HeadingLarge>
-      <div>
+      <div className="pb-[164px]">
         {storiesData.map((story) => (
           <Story
             key={story.avatar}
@@ -46,6 +46,7 @@ export const HomeStories: React.FC = () => {
           />
         ))}
       </div>
+      <img src="./assets/bg-pattern-home-5.svg" alt="pattern" className="absolute bottom-0 right-0"/>
     </section>
   );
 };
