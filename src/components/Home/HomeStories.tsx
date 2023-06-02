@@ -25,17 +25,17 @@ const storiesData = [
 
 export const HomeStories: React.FC = () => {
   return (
-    <section className="bg-green pt-[140px] px-[24px] relative">
+    <section className="bg-green pt-[140px] px-[24px] relative md:pt-[100px] xl:pt-[140px]">
       <img
         src="./assets/bg-pattern-home-4-about-3.svg"
         alt="pattern"
         className="absolute top-0 left-0"
       />
-      <HeadingLarge className="text-center max-w-[327px] mx-auto">
+      <HeadingLarge className="text-center max-w-[327px] mx-auto md:max-w-[480px] xl:max-w-[932px]">
         Delivering real results for top companies. Some of our{" "}
         <span className="text-light-blue">success stories.</span>
       </HeadingLarge>
-      <div className="pb-[164px]">
+      <div className="pb-[164px] md:pb-[100px] xl:flex xl:justify-center xl:gap-[30px] xl:pb-[150px]">
         {storiesData.map((story) => (
           <Story
             key={story.avatar}
