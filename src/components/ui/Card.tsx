@@ -16,7 +16,7 @@ export const Card: React.FC<Props> = ({
   return (
     <div
       className={classnames(
-        `${className} h-[253px] w-[327px] max-w-[100%] bg-dark-green relative md:w-[281px]`,
+        `${className} h-[253px] w-[327px] max-w-[100%] bg-dark-green relative md:w-[281px] xl:w-[350px]`,
         {
           "bg-sacramento-green": avatar,
         }
@@ -25,8 +25,11 @@ export const Card: React.FC<Props> = ({
       {children}
       <div
         className={classnames(
-          `h-[56px] w-[56px] bg-light-blue rounded-full flex justify-center items-center absolute bottom-[-28px] left-1/2 transform -translate-x-1/2`,
-          { "bg-orange": avatar }
+          `h-[56px] w-[56px] bg-light-blue rounded-full flex justify-center items-center absolute bottom-[-28px] left-1/2 transform -translate-x-1/2 cursor-pointer`,
+          {
+            "bg-orange hover:bg-light-blue": avatar,
+            "hover:bg-orange": avatar === false,
+          }
         )}
       >
         <img src={`./assets/icon-${icon}.svg`} alt="icon" />
