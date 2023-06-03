@@ -16,7 +16,7 @@ export const Card: React.FC<Props> = ({
   return (
     <div
       className={classnames(
-        `${className} h-[253px] w-[327px] max-w-[100%] bg-dark-green relative`,
+        `${className} h-[253px] w-[327px] max-w-[100%] bg-dark-green relative md:w-[281px]`,
         {
           "bg-sacramento-green": avatar,
         }
