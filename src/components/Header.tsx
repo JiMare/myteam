@@ -8,9 +8,9 @@ export const Header: React.FC = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <header className="bg-green px-[24px] md:px-[39px] xl:px-[165px] flex justify-between items-center pt-[48px] pb-[80px] md:pb-[112px] xl:pb-[120px]">
+    <header className="bg-green px-[24px] md:px-[39px] xl:px-[165px] flex justify-between items-center pt-[48px] pb-[80px] md:pb-[112px] xl:pb-[120px] md:pt-[72px]">
       <div className="md:flex md:gap-[48px] xl:gap-[80px]">
-        <img src="./assets/logo.svg" alt="logo-mnyteam" className="h-[32px]" />
+        <img src="./assets/logo.svg" alt="logo-mnyteam" className="h-[32px] xl:h-[40px]" />
 
         <div className="hidden md:flex md:gap-[40px] md:items-center">
           <Link to="/">

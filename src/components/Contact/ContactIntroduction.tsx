@@ -10,17 +10,19 @@ const topics = [
 
 export const ContactIntroduction: React.FC = () => {
   return (
-    <section className="bg-green px-[24px] pb-[56px] md:relative md:overflow-hidden md:pb-[64px]">
+    <section className="bg-green px-[24px] pb-[56px] md:relative md:overflow-hidden md:pb-[64px] xl:shrink-0 xl:px-0 xl:pb-[120px] xl:w-[556px]">
       <img
         src="./assets/bg-pattern-about-2-contact-1.svg"
         alt="pattern"
-        className="hidden md:block md:absolute md:left-[-100px]"
+        className="hidden md:block md:absolute md:left-[-100px] xl:hidden"
       />
-      <HeadingMainLarge className="text-center">Contact</HeadingMainLarge>
-      <HeadingLarge className="text-orange text-center mt-[16px] md:mt-[24px]">
+      <HeadingMainLarge className="text-center xl:text-[64px] xl:text-left">
+        Contact
+      </HeadingMainLarge>
+      <HeadingLarge className="text-orange text-center mt-[16px] md:mt-[24px] xl:text-[32px] xl:text-left xl:mt-[16px]">
         Ask us about
       </HeadingLarge>
-      <div className="mt-[40px] flex flex-col gap-[32px] items-center md:items-start md:w-[515px] md:mx-auto">
+      <div className="mt-[40px] flex flex-col gap-[32px] items-center md:items-start md:w-[515px] md:mx-auto md:mt-[24px] xl:mt-[32px] xl:ml-0 xl:gap-[8px]">
         {topics.map((topic) => (
           <Topic key={topic.icon} icon={topic.icon} text={topic.text} />
         ))}

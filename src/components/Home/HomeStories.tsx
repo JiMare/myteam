@@ -25,7 +25,7 @@ const storiesData = [
 
 export const HomeStories: React.FC = () => {
   return (
-    <section className="bg-green pt-[140px] px-[24px] relative md:pt-[100px] xl:pt-[140px]">
+    <section className="bg-jungle-green pt-[140px] px-[24px] relative md:pt-[100px] xl:pt-[140px]">
       <img
         src="./assets/bg-pattern-home-4-about-3.svg"
         alt="pattern"

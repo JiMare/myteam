@@ -29,8 +29,8 @@ export const ContactForm: React.FC = () => {
   });
 
   return (
-    <section className="bg-green pb-[88px] px-[24px] relative overflow-hidden md:pb-[112px]">
-      <div className="max-w-[327px] mx-auto md:max-w-[515px]">
+    <section className="bg-green pb-[88px] px-[24px] relative overflow-hidden md:pb-[112px] xl:w-1/2 xl:px-0 xl:max-w-[556px]">
+      <div className="max-w-[327px] mx-auto md:max-w-[515px] xl:max-w-[556px]">
         <form onSubmit={handleSubmit((data) => console.log(data))}>
           <Input
             label="Name"
@@ -75,7 +75,7 @@ export const ContactForm: React.FC = () => {
       <img
         src="./assets/bg-pattern-contact-2.svg"
         alt="pattern"
-        className="absolute right-[-100px] bottom-[-100px] md:bottom-0"
+        className="absolute right-[-100px] bottom-[-100px] md:bottom-0 xl:hidden"
       />
     </section>
   );

@@ -26,7 +26,7 @@ export const HomeFeatures: React.FC = () => {
       <img
         src="./assets/bg-pattern-home-3.svg"
         alt="pattern"
-        className="absolute top-0 right-[-100px]"
+        className="absolute top-0 right-[-100px] xl:top-auto xl:bottom-0"
       />
       <div className="xl:flex xl:gap-[125px]">
         <HeadingLarge className="pt-[32px] xl:pt-[54px] max-w-[240px] relative after:w-[50px] after:h-[4px] after:bg-orange after:absolute after:top-0 after:left-0 mb-[56px] md:mb-[64px] md:max-w-[445px]">
