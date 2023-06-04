@@ -3,10 +3,12 @@ import classnames from "classnames";
 
 type Props = {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   secondary?: boolean;
   dark?: boolean;
   className?: string;
+  type?: "button" | "submit" | "reset";
+  small?: boolean;
 };
 
 export const Button: React.FC<Props> = ({
@@ -15,9 +17,12 @@ export const Button: React.FC<Props> = ({
   dark = false,
   children,
   className,
+  small = false,
+  type = "button",
 }) => {
   return (
     <button
+      type={type}
       onClick={onClick}
       className={classnames(
         `${className} h-[48px] border-2 rounded-3xl font-semibold text-[18px] w-[153px]`,
@@ -28,6 +33,7 @@ export const Button: React.FC<Props> = ({
             secondary,
           "border-white text-white bg-inherit hover:text-sacramento-green hover:bg-white":
             !dark && !secondary,
+          "w-[123px]": small,
         }
       )}
     >

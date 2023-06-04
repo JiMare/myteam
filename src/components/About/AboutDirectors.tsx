@@ -49,7 +49,7 @@ export const AboutDirectors: React.FC = () => {
       <HeadingLarge className="text-center">Meet the directors</HeadingLarge>
       <div className="flex flex-col gap-[52px] items-center pt-[48px] md:flex-row md:flex-wrap md:justify-center md:gap-[11px] md:w-[573px] md:mx-auto xl:pt-[64px] xl:gap-[30px] xl:w-[1110px]">
         {directors.map((director) => (
-          <Card className="md:mb-[65px] xl:mb-[46px]">
+          <Card key={director.name} className="md:mb-[65px] xl:mb-[46px]">
             <Director key={director.avatar} director={director} />
           </Card>
         ))}
